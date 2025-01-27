@@ -1,0 +1,10 @@
+#container {
+  display: flex;
+}
+#container app-aside-menu {
+  flex-shrink: 0;
+}
+#container #content {
+  height: 3000px;
+  flex-grow: 1;
+}/*# sourceMappingURL=home.component.css.map */

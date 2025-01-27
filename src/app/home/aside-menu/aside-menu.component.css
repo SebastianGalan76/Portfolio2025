@@ -1,0 +1,43 @@
+#wrapper {
+  position: sticky;
+  top: 0;
+  width: 80px;
+  height: 100dvh;
+}
+#wrapper #container {
+  height: 100%;
+  width: 100%;
+  background-color: var(--color-theme);
+  transition: width 0.5s ease-in-out;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+#wrapper #container:hover {
+  width: 250px;
+}
+#wrapper #container:hover #content .button .icon {
+  width: 80px;
+  text-align: center;
+  background-color: rebeccapurple;
+  font-size: 1.5rem;
+}
+#wrapper #container:hover #content .button .text {
+  position: absolute;
+  width: 300px;
+}
+#wrapper #container #content .button {
+  overflow: hidden;
+}
+#wrapper #container #content .button .icon {
+  width: 80px;
+  text-align: center;
+  background-color: rebeccapurple;
+  font-size: 1.5rem;
+}
+#wrapper #container #content .button .text {
+  position: relative;
+  width: 0;
+  transition: width 0.5s ease-in-out;
+}/*# sourceMappingURL=aside-menu.component.css.map */

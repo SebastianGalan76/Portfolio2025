@@ -1,5 +1,11 @@
 :root {
     --color-background: #151b27;
+
+    --color-theme: #4e8dec;
+    --color-theme-accent: #4e76ec;
+
+    --color-text: white;
+    --color-text-light: rgba(255, 255, 255, 0.7);
 }
 
 * {
@@ -12,6 +18,7 @@ body {
     background-color: var(--color-background);
     font-family: "Poppins", serif;
     min-width: 360px;
+    color: var(--color-text);
 }
 
 a {

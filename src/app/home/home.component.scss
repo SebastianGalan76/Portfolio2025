@@ -1,0 +1,12 @@
+#container {
+    display: flex;
+
+    app-aside-menu {
+        flex-shrink: 0;
+    }
+
+    #content {
+        height: 3000px;
+        flex-grow: 1;
+    }
+}
