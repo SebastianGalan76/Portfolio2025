@@ -1,0 +1,121 @@
+@charset "UTF-8";
+#container-wrapper {
+  background-color: var(--color-background2);
+  padding: 30px 0;
+  margin-top: 150px;
+}
+
+#container {
+  width: min(80%, 1400px);
+  margin-left: auto;
+  margin-right: auto;
+}
+#container #content {
+  min-height: 600px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 25px;
+}
+#container #content #form-container {
+  background-color: var(--color-background);
+  border-radius: 15px;
+  min-width: 500px;
+  min-height: 400px;
+}
+@media (max-width: 600px) {
+  #container #content #form-container {
+    min-width: unset;
+  }
+}
+#container #content #right-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#container #content #right-panel .text {
+  text-align: justify;
+}
+#container #content #right-panel .wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 10px;
+}
+#container #content #right-panel .wrapper .item {
+  background-color: rgb(99, 151, 210);
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+#container #content #right-panel .wrapper .item .icon {
+  transition: transform 0.3s ease;
+}
+#container #content #right-panel .wrapper .item .icon img {
+  max-width: 50px;
+  max-height: 50px;
+  width: auto;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#container #content #right-panel .wrapper .item#linkedin {
+  background-color: #0e76a8;
+}
+#container #content #right-panel .wrapper .item#discord {
+  background-color: #7289da;
+}
+#container #content #right-panel .wrapper .item#email {
+  background-color: #3d4b64;
+  transition: all 0.5s ease;
+}
+#container #content #right-panel .wrapper .item::before {
+  content: "Kliknij, aby przejść";
+  background-color: #f9ae6c;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  font-size: 1.1rem;
+  padding: 0 0;
+  max-height: 0;
+  transition: all 0.3s ease-in-out;
+}
+#container #content #right-panel .wrapper .item.copyable::before {
+  content: "Kliknij, aby skopiować";
+}
+#container #content #right-panel .wrapper .item:hover {
+  cursor: pointer;
+}
+#container #content #right-panel .wrapper .item:hover .icon {
+  transform: scale(1.3);
+}
+#container #content #right-panel .wrapper .item:hover::before {
+  max-height: 100px;
+  padding: 10px 0;
+}
+#container #content #right-panel .wrapper .item:last-child {
+  grid-column: 1/-1;
+}
+@media (max-width: 1200px) {
+  #container #content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #container #content #form-container {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+@media (max-width: 1200px) {
+  #container {
+    width: 96%;
+  }
+}/*# sourceMappingURL=contact-section.component.css.map */
