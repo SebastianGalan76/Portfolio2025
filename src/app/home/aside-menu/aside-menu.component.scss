@@ -5,6 +5,8 @@
     width: 80px;
     height: 100dvh;
 
+    z-index: 100;
+
     #container {
         height: 100%;
         width: 100%;
@@ -12,7 +14,6 @@
         background-color: var(--color-theme);
         transition: width 0.3s ease-in-out;
 
-        z-index: 100;
         overflow: hidden;
 
         &:hover {
@@ -61,6 +62,21 @@
                     cursor: pointer;
                     background-color: var(--color-theme-accent);
                     color: var(--color-text);
+                }
+            }
+        }
+    }
+
+    @media (max-width: 800px) {
+        display: none;
+
+        #container {
+            #content {
+                .button {
+                    .icon {
+                        width: 50px;
+                        font-size: 1.3rem;
+                    }
                 }
             }
         }
