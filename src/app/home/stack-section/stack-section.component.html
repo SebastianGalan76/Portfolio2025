@@ -1,0 +1,39 @@
+<div id="container">
+    <app-section-header [title]="'Umiejętności'"
+        [description]="'W swojej karierze programisty zdobyłem umiejętności w zakresie szerokiej gamy technologii i narzędzi, które pozwalają mi realizować wszelkiego rodzaju projekty. Poniżej znajdują się niektóre umiejętności, które rozwinąłem.'" />
+    <div class="filter-container">
+        <div class="option" (mouseenter)="showStacksByCategory(StackCategory.FRONTEND)" (mouseleave)="showAllStacks()">
+            <div class="color frontend"></div>Frontend
+        </div>
+        <div class="option" (mouseenter)="showStacksByCategory(StackCategory.BACKEND)" (mouseleave)="showAllStacks()">
+            <div class="color backend"></div>Backend
+        </div>
+        <div class="option" (mouseenter)="showStacksByCategory(StackCategory.GAME)" (mouseleave)="showAllStacks()">
+            <div class="color game"></div>Gry
+        </div>
+    </div>
+
+    <div class="stack-container">
+        <div class="stack" [ngClass]="stack.getNgClass()" *ngFor="let stack of stacks">
+            <div class="icon">
+                <img [src]="stack.icon">
+            </div>
+            {{stack.name}}
+        </div>
+    </div>
+
+    <div class="filter-container">
+        <div class="option">
+            <div class="color tool"></div>Narzędzia
+        </div>
+    </div>
+
+    <div class="stack-container">
+        <div class="stack highlight" *ngFor="let stack of tools">
+            <div class="icon">
+                <img [src]="stack.icon">
+            </div>
+            {{stack.name}}
+        </div>
+    </div>
+</div>
