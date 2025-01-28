@@ -24,4 +24,25 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-theme) #202345;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #202345;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-theme);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-theme-accent);
 }/*# sourceMappingURL=styles.css.map */
