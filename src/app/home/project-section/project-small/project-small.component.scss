@@ -1,0 +1,76 @@
+#container {
+    width: 100%;
+    padding: 15px;
+
+    background-color: var(--color-background2);
+    border-radius: 10px;
+
+    #preview {
+        overflow: hidden;
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: cover;
+
+            transition: transform 0.9s ease;
+        }
+    }
+
+    #information {
+        #header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            #project-info {
+                #type {
+                    color: var(--color-main-theme);
+                    font-size: 0.9rem;
+                }
+
+                #name {
+                    font-size: 1.8rem;
+                    margin-top: -12px;
+                }
+            }
+
+            #button-container {
+                display: flex;
+                gap: 10px;
+
+                .button {
+                    color: var(--color-text-light);
+                    padding: 4px 10px;
+                    border: 1px solid var(--color-text);
+                    border-radius: 8px;
+
+                    &:hover {
+                        cursor: pointer;
+                        color: var(--color-text);
+                    }
+                }
+            }
+        }
+
+        #description {
+            font-size: 0.8rem;
+            text-align: justify;
+            color: var(--color-text-light);
+        }
+    }
+
+    &:hover {
+        cursor: pointer;
+
+        background-color: var(--color-background3);
+
+        #preview {
+            img {
+                transform: scale(1.2);
+            }
+        }
+    }
+}

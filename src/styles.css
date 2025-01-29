@@ -27,7 +27,6 @@ a {
 }
 
 html {
-  scrollbar-width: thin;
   scrollbar-color: var(--color-theme) #202345;
 }
 
