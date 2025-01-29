@@ -4,6 +4,7 @@
 
     background-color: var(--color-background2);
     border-radius: 10px;
+    border: 2px solid var(--color-background3);
 
     #preview {
         overflow: hidden;
@@ -14,12 +15,14 @@
             width: auto;
             height: auto;
             object-fit: cover;
-
+            display: block;
             transition: transform 0.9s ease;
         }
     }
 
     #information {
+        margin-top: 5px;
+
         #header {
             display: flex;
             justify-content: space-between;
@@ -27,13 +30,13 @@
 
             #project-info {
                 #type {
-                    color: var(--color-main-theme);
-                    font-size: 0.9rem;
+                    color: var(--color-theme);
+                    font-size: 0.8em;
                 }
 
                 #name {
-                    font-size: 1.8rem;
-                    margin-top: -12px;
+                    font-size: 1.2em;
+                    margin-top: -8px;
                 }
             }
 
@@ -50,27 +53,31 @@
                     &:hover {
                         cursor: pointer;
                         color: var(--color-text);
+                        background-color: var(--color-background);
                     }
                 }
             }
         }
 
         #description {
-            font-size: 0.8rem;
+            font-size: 0.8em;
             text-align: justify;
             color: var(--color-text-light);
         }
     }
 
     &:hover {
-        cursor: pointer;
-
-        background-color: var(--color-background3);
-
         #preview {
             img {
                 transform: scale(1.2);
             }
         }
+    }
+
+    @media (max-width: 800px) {
+        padding: 4px;
+        border-radius: 6px;
+
+        font-size: 0.9em;
     }
 }
