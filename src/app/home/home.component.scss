@@ -8,4 +8,12 @@
     #content {
         flex-grow: 1;
     }
+
+    @media (max-width: 800px) {
+        #content {
+            > * {
+                scroll-margin-top: 50px;
+            }
+        }
+    }
 }
