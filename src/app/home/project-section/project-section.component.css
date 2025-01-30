@@ -48,10 +48,10 @@
   margin-right: auto;
   border-radius: 15px;
   padding: 0 15px 15px 15px;
+  position: relative;
 }
 #project-small-container app-project-small {
   width: 400px;
-  height: auto;
   flex-shrink: 0;
 }
 @media (max-width: 1700px) and (min-width: 800px) {

@@ -102,10 +102,28 @@
   padding: 4px 10px;
   border: 1px solid var(--color-text);
   border-radius: 8px;
+  position: relative;
+}
+#container #information #footer #button-container .button ul {
+  display: none;
+  position: absolute;
+  left: -1px;
+  z-index: 10;
+  background-color: var(--color-background);
+  padding: 4px 10px;
+  border: 1px solid var(--color-text);
+  border-radius: 0 8px 8px 8px;
+  list-style: none;
+}
+#container #information #footer #button-container .button ul li {
+  padding: 10px;
 }
 #container #information #footer #button-container .button:hover {
   cursor: pointer;
   color: var(--color-text);
+}
+#container #information #footer #button-container .button:hover ul {
+  display: block;
 }
 #container:hover #preview img {
   transform: scale(1.1);

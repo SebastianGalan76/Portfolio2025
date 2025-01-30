@@ -49,6 +49,9 @@
   margin-top: -5px;
 }
 #container #down-panel {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   clear: both;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;

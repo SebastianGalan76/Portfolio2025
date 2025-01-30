@@ -1,24 +1,41 @@
 <div id="container">
-    <div id="preview">
-        <img src="/img/mc-list-preview1.png" />
-    </div>
+    <a [href]="live" target="_blank">
+        <div id="preview">
+            <img [src]="'/img/'+imgSrc" />
+        </div>
+    </a>
     <div id="information">
         <div id="header">
             <div id="project-info">
-                <div id="type">Strona internetowa</div>
-                <div id="name">MC-List.pl</div>
+                <div id="type">{{type}}</div>
+                <div id="name">{{name}}</div>
             </div>
             <div id="button-container">
-                <div class="button">GitHub</div>
-                <a href="https://mc-list.pl/" target="_blank">
+                @if (github.length == 1) {
+                <a [href]="github[0].link" target="_blank">
+                    <div class="button">GitHub
+                    </div>
+                </a>
+                }
+                @else if (github.length > 1) {
+                <div class="button">GitHub
+                    <ul>
+                        <a [href]="link.link" target="_blank" *ngFor="let link of github">
+                            <li>{{link.name}}</li>
+                        </a>
+
+                    </ul>
+                </div>
+                }
+                @if (live) {
+                <a [href]="live" target="_blank">
                     <div class="button">Live</div>
                 </a>
+                }
             </div>
         </div>
         <div id="description">
-            W swojej karierze programisty zdobyłem umiejętności w zakresie szerokiej gamy technologii i narzędzi, które
-            pozwalają mi realizować wszelkiego rodzaju projekty. Poniżej znajdują się niektóre umiejętności, które
-            rozwinąłem.
+            {{description}}
         </div>
     </div>
 </div>

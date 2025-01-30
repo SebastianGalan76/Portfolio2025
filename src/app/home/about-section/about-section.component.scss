@@ -65,6 +65,8 @@
     }
 
     #down-panel {
+        user-select: none;
+
         clear: both;
 
         display: grid;

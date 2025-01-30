@@ -1,21 +1,15 @@
-#wrapper {
-  position: sticky;
-  top: 0;
-  width: 80px;
-  height: 100dvh;
-  z-index: 100;
-}
-#wrapper #mobile-header {
-  width: calc(100vw - 17px);
+#mobile-header {
+  width: 100%;
   height: 50px;
   background-color: var(--color-theme);
   display: none;
-  position: absolute;
+  position: fixed;
   top: 0;
+  z-index: 1000;
   font-size: 1.8rem;
   padding: 0 15px;
 }
-#wrapper #mobile-header #menu-button {
+#mobile-header #menu-button {
   position: relative;
   height: 50px;
   width: 50px;
@@ -23,23 +17,34 @@
   align-items: center;
   justify-content: center;
 }
-#wrapper #mobile-header #menu-button i {
+#mobile-header #menu-button i {
   position: absolute;
   transition: transform 0.2s ease;
 }
-#wrapper #mobile-header #menu-button .fa-xmark {
+#mobile-header #menu-button .fa-xmark {
   transform: scale(0);
 }
-#wrapper #mobile-header #menu-button.active i.fa-bars {
+#mobile-header #menu-button:hover {
+  cursor: pointer;
+}
+#mobile-header #menu-button.active i.fa-bars {
   transform: scale(0);
 }
-#wrapper #mobile-header #menu-button.active i.fa-xmark {
+#mobile-header #menu-button.active i.fa-xmark {
   transform: scale(1);
 }
 @media (max-width: 800px) {
-  #wrapper #mobile-header {
+  #mobile-header {
     display: block;
   }
+}
+
+#wrapper {
+  position: sticky;
+  top: 0;
+  width: 80px;
+  height: 100dvh;
+  z-index: 100;
 }
 #wrapper #container {
   height: 100%;
@@ -47,6 +52,9 @@
   background-color: var(--color-theme);
   transition: width 0.3s ease-in-out;
   overflow: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 #wrapper #container:hover {
   width: 250px;

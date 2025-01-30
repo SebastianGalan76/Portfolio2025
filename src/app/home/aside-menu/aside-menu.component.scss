@@ -1,3 +1,58 @@
+#mobile-header {
+    width: 100%;
+    height: 50px;
+    background-color: var(--color-theme);
+
+    display: none;
+
+    position: fixed;
+    top: 0;
+
+    z-index: 1000;
+
+    font-size: 1.8rem;
+    padding: 0 15px;
+
+    #menu-button {
+        position: relative;
+
+        height: 50px;
+        width: 50px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        i {
+            position: absolute;
+            transition: transform 0.2s ease;
+        }
+
+        .fa-xmark {
+            transform: scale(0);
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &.active {
+            i {
+                &.fa-bars {
+                    transform: scale(0);
+                }
+                &.fa-xmark {
+                    transform: scale(1);
+                }
+            }
+        }
+    }
+
+    @media (max-width: 800px) {
+        display: block;
+    }
+}
+
 #wrapper {
     position: sticky;
     top: 0;
@@ -7,55 +62,6 @@
 
     z-index: 100;
 
-    #mobile-header {
-        width: calc(100vw - 17px);
-        height: 50px;
-        background-color: var(--color-theme);
-
-        display: none;
-
-        position: absolute;
-        top: 0;
-
-        font-size: 1.8rem;
-        padding: 0 15px;
-
-        #menu-button {
-            position: relative;
-
-            height: 50px;
-            width: 50px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            i {
-                position: absolute;
-                transition: transform 0.2s ease;
-            }
-
-            .fa-xmark {
-                transform: scale(0);
-            }
-
-            &.active {
-                i {
-                    &.fa-bars {
-                        transform: scale(0);
-                    }
-                    &.fa-xmark {
-                        transform: scale(1);
-                    }
-                }
-            }
-        }
-
-        @media (max-width: 800px) {
-            display: block;
-        }
-    }
-
     #container {
         height: 100%;
         width: 100%;
@@ -64,6 +70,8 @@
         transition: width 0.3s ease-in-out;
 
         overflow: hidden;
+
+        user-select: none;
 
         &:hover {
             width: 250px;
