@@ -36,16 +36,21 @@
         <div class="button">
             Pobierz CV
         </div>
-        <div class="button">
-            GitHub
-        </div>
-        <div class="button">
-            LinkedIn
-        </div>
-        <div class="button" id="projects">
+        <a href="https://github.com/SebastianGalan76" target="_blank">
+            <div class="button">
+                GitHub
+            </div>
+        </a>
+        <a href="https://www.linkedin.com/in/galan-sebastian/" target="_blank">
+            <div class="button">
+                LinkedIn
+            </div>
+        </a>
+
+        <div class="button" id="projects" (click)="scrollTo('project-section')">
             Projekty
         </div>
-        <div class="button" id="contact">
+        <div class="button" id="contact" (click)="scrollTo('contact-section')">
             Kontakt
         </div>
     </div>

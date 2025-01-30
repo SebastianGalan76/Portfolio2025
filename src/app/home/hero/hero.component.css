@@ -1,7 +1,12 @@
-#container #hero-background {
+#container {
   position: relative;
+  background-color: rgb(0, 0, 0);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
-#container #hero-background #text-container {
+#container #text-container {
+  background-color: rgba(255, 255, 255, 0.15);
   position: absolute;
   left: 50%;
   top: 50%;
@@ -15,203 +20,17 @@
   border: 2px solid white;
   text-wrap: nowrap;
 }
-#container #hero-background #text-container #line2 {
+#container #text-container #line2 {
   font-size: 0.8em;
   margin-top: -5%;
   font-weight: 600;
 }
-#container #hero-background #hero-img {
+#container #hero-img {
   min-height: 300px;
   width: 100%;
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
   display: block;
-}
-#container #profile-info {
-  background-color: var(--color-background2);
-  width: min(80%, 1400px);
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  top: -100px;
-  border-radius: 20px;
-}
-#container #profile-info #up-panel {
-  display: flex;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.1921568627);
-  height: 70px;
-}
-#container #profile-info #up-panel #profile-picture {
-  width: 200px;
-  height: 200px;
-  overflow: hidden;
-  border-radius: 100%;
-  border: 5px solid var(--color-background2);
-  margin-left: 50px;
-  position: relative;
-  top: -100px;
-  flex-shrink: 0;
-}
-#container #profile-info #up-panel #profile-picture img {
-  max-width: 100%;
-  max-height: 100%;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-#container #profile-info #up-panel #profile-name {
-  padding: 10px;
-  font-size: 2rem;
-  font-weight: 600;
-  flex-grow: 1;
-  height: -moz-fit-content;
-  height: fit-content;
-  line-height: 50px;
-}
-#container #profile-info #up-panel #button-container {
-  display: flex;
-  margin-right: 5px;
-}
-#container #profile-info #up-panel #button-container .button {
-  margin: 10px 5px;
-  width: 100%;
-  aspect-ratio: 1/1;
-  background-color: rgba(255, 255, 255, 0.099);
-  font-size: 1.5rem;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-text-light);
-}
-#container #profile-info #up-panel #button-container .button i {
-  transition: transform 0.3s ease;
-}
-#container #profile-info #up-panel #button-container .button:hover {
-  cursor: pointer;
-  color: var(--color-text);
-}
-#container #profile-info #up-panel #button-container .button:hover i {
-  transform: scale(1.3) rotate(5deg);
-}
-@media (max-width: 650px) {
-  #container #profile-info #up-panel #button-container {
-    display: none;
-  }
-}
-#container #profile-info #down-panel {
-  width: 100%;
-  margin-top: 20px;
-  display: flex;
-  gap: 20px;
-  padding: 20px;
-}
-#container #profile-info #down-panel .section .title {
-  opacity: 0.3;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-#container #profile-info #down-panel .section .content {
-  text-align: justify;
-}
-#container #profile-info #down-panel .section .content a {
-  color: var(--color-main-theme);
-}
-#container #profile-info #down-panel .section .content a:hover {
-  color: var(--color-main-theme-accent);
-}
-#container #profile-info #down-panel #status-section {
-  flex-shrink: 0;
-}
-#container #profile-info #down-panel #status-section .content {
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-#container #profile-info #down-panel #status-section .content #status {
-  text-align: center;
-  background-color: var(--color-background);
-  width: -moz-fit-content;
-  width: fit-content;
-  font-weight: 700;
-  padding: 10px;
-  border-radius: 15px;
-  border: 2px solid #2aff5f;
-  color: #2aff5f;
-}
-#container #profile-info #down-panel #status-section .content #status i {
-  font-size: 3rem;
-}
-#container #profile-info #down-panel #status-section .content #information .info .up {
-  display: block;
-}
-#container #profile-info #down-panel #status-section .content #information .info .down {
-  color: var(--color-text);
-  opacity: 0.6;
-  font-size: 0.8rem;
-  margin-top: -5px;
-}
-@media (max-width: 1400px) {
-  #container #profile-info {
-    top: -60px;
-  }
-}
-@media (max-width: 1200px) {
-  #container #profile-info {
-    width: 96%;
-  }
-  #container #profile-info #up-panel #profile-picture {
-    width: 150px;
-    height: 150px;
-    top: -65px;
-  }
-}
-@media (max-width: 800px) {
-  #container #profile-info {
-    width: 96%;
-    top: -50px;
-  }
-  #container #profile-info #up-panel #profile-picture {
-    width: 150px;
-    height: 150px;
-    top: -65px;
-    margin-left: 10px;
-  }
-  #container #profile-info #up-panel #profile-name {
-    font-size: 1.3rem;
-  }
-  #container #profile-info #down-panel {
-    margin-top: 0;
-  }
-  #container #profile-info #down-panel #status-section {
-    display: none;
-  }
-  #container #profile-info #down-panel .section .content {
-    font-size: 0.9rem;
-  }
-}
-@media (max-width: 500px) {
-  #container #profile-info {
-    width: 96%;
-  }
-  #container #profile-info #up-panel #profile-picture {
-    width: 120px;
-    height: 120px;
-    top: -30px;
-    margin-left: 10px;
-  }
-  #container #profile-info #up-panel #profile-name {
-    font-size: 1rem;
-  }
-  #container #profile-info #down-panel {
-    padding: 20px 5px 5px 5px;
-  }
-  #container #profile-info #down-panel .section .content {
-    font-size: 0.8rem;
-  }
+  opacity: 0.4;
 }/*# sourceMappingURL=hero.component.css.map */

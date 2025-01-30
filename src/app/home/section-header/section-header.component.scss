@@ -10,10 +10,15 @@
         line-height: 60px;
 
         border-left: 8px solid var(--color-theme);
+        background-color: var(--color-background);
 
         display: flex;
         align-items: center;
         letter-spacing: 0;
+
+        &.background2 {
+            background-color: var(--color-background2);
+        }
     }
 
     #description {
@@ -34,7 +39,6 @@
             border-left: none;
             padding: 0 10px 0 0;
 
-            background-color: var(--color-background);
             z-index: 10;
 
             width: fit-content;

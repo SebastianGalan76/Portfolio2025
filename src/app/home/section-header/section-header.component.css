@@ -9,9 +9,13 @@
   font-weight: 600;
   line-height: 60px;
   border-left: 8px solid var(--color-theme);
+  background-color: var(--color-background);
   display: flex;
   align-items: center;
   letter-spacing: 0;
+}
+#header #title.background2 {
+  background-color: var(--color-background2);
 }
 #header #description {
   font-weight: 300;
@@ -28,7 +32,6 @@
   #header #title {
     border-left: none;
     padding: 0 10px 0 0;
-    background-color: var(--color-background);
     z-index: 10;
     width: -moz-fit-content;
     width: fit-content;

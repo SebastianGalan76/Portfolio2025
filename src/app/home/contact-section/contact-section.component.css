@@ -4,6 +4,11 @@
   padding: 30px 0;
   margin-top: 150px;
 }
+@media (max-width: 500px) {
+  #container-wrapper {
+    margin-top: 20px;
+  }
+}
 
 #container {
   width: min(80%, 1400px);

@@ -8,6 +8,10 @@
     @media (max-width: 1200px) {
         width: 96%;
     }
+
+    @media (max-width: 500px) {
+        margin-top: 20px;
+    }
 }
 
 #project-big-wrapper {

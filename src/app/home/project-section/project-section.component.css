@@ -9,6 +9,11 @@
     width: 96%;
   }
 }
+@media (max-width: 500px) {
+  #header-container {
+    margin-top: 20px;
+  }
+}
 
 #project-big-wrapper {
   margin-top: 30px;

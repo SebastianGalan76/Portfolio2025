@@ -8,5 +8,10 @@ import { SectionHeaderComponent } from "../section-header/section-header.compone
   styleUrl: './about-section.component.scss'
 })
 export class AboutSectionComponent {
-
+  scrollTo(elementId: string): void {
+    const element = document.getElementById(elementId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 }
