@@ -30,6 +30,9 @@
   border-top: 2px solid var(--color-background3);
   border-bottom: 2px solid var(--color-background3);
   border-right: 2px solid var(--color-background3);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 #container #information #header {
   text-align: right;

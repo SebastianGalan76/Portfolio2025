@@ -20,6 +20,9 @@
   transition: transform 0.9s ease;
 }
 #container #information {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   margin-top: 5px;
 }
 #container #information #header {

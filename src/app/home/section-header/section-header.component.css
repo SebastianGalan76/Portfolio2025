@@ -1,6 +1,9 @@
 #header {
   display: flex;
   align-items: stretch;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 #header #title {
   padding: 0 20px;

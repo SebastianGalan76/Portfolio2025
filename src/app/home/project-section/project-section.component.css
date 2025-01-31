@@ -20,6 +20,7 @@
   margin-bottom: 30px;
   background-color: var(--color-background2);
   padding: 50px 0;
+  overflow: hidden;
 }
 #project-big-wrapper #project-big-container {
   width: min(90%, 1600px);

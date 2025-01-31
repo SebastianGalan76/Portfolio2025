@@ -1,10 +1,10 @@
 <div id="container">
-    <div id="left-panel">
+    <div id="left-panel" data-aos="fade-up">
         <div id="photo-wrapper">
             <img src="/img/photo.jpg" />
         </div>
     </div>
-    <div id="right-panel">
+    <div id="right-panel" data-aos="fade-up">
         <app-section-header [title]="'Profil'" />
         <div id="description">
             Junior Fullstack Developer z doświadczeniem w tworzeniu aplikacji
@@ -34,24 +34,26 @@
     </div>
 
     <div id="down-panel">
-        <div class="button">
-            Pobierz CV
-        </div>
-        <a href="https://github.com/SebastianGalan76" target="_blank">
+        <a href="/Sebastian Gałan - CV.pdf" data-aos="fade-up">
+            <div class="button">
+                CV
+            </div>
+        </a>
+        <a href="https://github.com/SebastianGalan76" target="_blank" data-aos="fade-up" data-aos-delay="50">
             <div class="button">
                 GitHub
             </div>
         </a>
-        <a href="https://www.linkedin.com/in/galan-sebastian/" target="_blank">
+        <a href="https://www.linkedin.com/in/galan-sebastian/" target="_blank" data-aos="fade-up" data-aos-delay="100">
             <div class="button">
                 LinkedIn
             </div>
         </a>
 
-        <div class="button" id="projects" (click)="scrollTo('project-section')">
+        <div class="button" id="projects" (click)="scrollTo('project-section')" data-aos="fade-up" data-aos-delay="150">
             Projekty
         </div>
-        <div class="button" id="contact" (click)="scrollTo('contact-section')">
+        <div class="button" id="contact" (click)="scrollTo('contact-section')" data-aos="fade-up" data-aos-delay="200">
             Kontakt
         </div>
     </div>
