@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { SectionHeaderComponent } from "../section-header/section-header.component";
 
 export enum StackCategory {
-  BACKEND, FRONTEND, MOBILE, GAME
+  BACKEND, FRONTEND, GAME
 }
 
 export class Stack {
@@ -45,9 +45,6 @@ export class Stack {
         case StackCategory.FRONTEND:
           ngClass = "frontend";
           break;
-        case StackCategory.MOBILE:
-          ngClass = "app";
-          break;
         case StackCategory.GAME:
           ngClass = "game";
           break;
@@ -70,7 +67,7 @@ export class Stack {
 })
 export class StackComponent {
   stacks: Stack[] = [
-    new Stack('Java', 'java-svgrepo-com.svg', [StackCategory.BACKEND, StackCategory.MOBILE]),
+    new Stack('Java', 'java-svgrepo-com.svg', [StackCategory.BACKEND]),
     new Stack('Spring Boot', 'https://spring.io/img/spring.svg', [StackCategory.BACKEND]),
     new Stack('Angular', 'https://upload.wikimedia.org/wikipedia/commons/c/cf/Angular_full_color_logo.svg', [StackCategory.FRONTEND]),
     new Stack('Hibernate', 'hibernate-svgrepo-com.svg', [StackCategory.BACKEND]),
@@ -92,6 +89,7 @@ export class StackComponent {
     new Stack('Unity3D', 'unity-svgrepo-com.svg', []),
     new Stack('Jenkins', 'https://upload.wikimedia.org/wikipedia/commons/e/e9/Jenkins_logo.svg', []),
     new Stack('Android Studio', 'https://upload.wikimedia.org/wikipedia/commons/9/95/Android_Studio_Icon_3.6.svg', []),
+    new Stack('Figma', 'https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg', [StackCategory.FRONTEND])
   ]
 
   selectedCategory: StackCategory[] = [];

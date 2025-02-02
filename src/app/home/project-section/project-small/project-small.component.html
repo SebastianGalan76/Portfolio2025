@@ -7,7 +7,7 @@
     <div id="information">
         <div id="header">
             <div id="project-info">
-                <div id="type">{{type}}</div>
+                <div id="type" [ngClass]="{'red': duringDevelop}">{{type}}</div>
                 <div id="name">{{name}}</div>
             </div>
             <div id="button-container">

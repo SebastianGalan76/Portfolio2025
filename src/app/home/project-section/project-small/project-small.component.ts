@@ -1,4 +1,4 @@
-import { NgFor } from '@angular/common';
+import { NgClass, NgFor } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
 export interface GitHubLink {
@@ -8,7 +8,7 @@ export interface GitHubLink {
 
 @Component({
   selector: 'app-project-small',
-  imports: [NgFor],
+  imports: [NgFor, NgClass],
   templateUrl: './project-small.component.html',
   styleUrl: './project-small.component.scss'
 })
@@ -20,4 +20,5 @@ export class ProjectSmallComponent {
 
   @Input() github: GitHubLink[] = [];
   @Input() live: string | null = null;
+  @Input() duringDevelop: boolean = false;
 }

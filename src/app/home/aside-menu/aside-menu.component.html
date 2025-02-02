@@ -4,8 +4,9 @@
         <i class="fa-solid fa-xmark"></i>
     </div>
 </div>
-<div id="wrapper">
-    <div id="container" [ngClass]="{'active': isActive}">
+<div id="background-button" [ngClass]="{'active': isActive}" (click)="toggleMenu()"></div>
+<div id="wrapper" [ngClass]="{'active': isActive}">
+    <div id="container">
         <div id="content">
             <nav>
                 <ul>

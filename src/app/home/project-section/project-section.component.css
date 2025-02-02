@@ -39,7 +39,7 @@
 }
 
 #project-small-container {
-  max-width: 88vw;
+  max-width: 86vw;
   width: -moz-fit-content;
   width: fit-content;
   display: flex;
@@ -61,6 +61,14 @@
   }
 }
 @media (max-width: 1200px) {
+  #project-small-container app-project-small {
+    width: 350px;
+  }
+}
+@media (max-width: 800px) {
+  #project-small-container {
+    max-width: 96vw;
+  }
   #project-small-container app-project-small {
     width: 350px;
   }
