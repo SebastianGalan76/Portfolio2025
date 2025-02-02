@@ -1,0 +1,11 @@
+#container {
+  margin-top: 250px;
+  background-color: var(--color-background2);
+  text-align: center;
+}
+#container a {
+  color: var(--color-theme);
+}
+#container a:hover {
+  color: var(--color-theme-accent);
+}/*# sourceMappingURL=footer.component.css.map */

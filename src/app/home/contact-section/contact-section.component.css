@@ -3,6 +3,9 @@
   background-color: var(--color-background2);
   padding: 30px 0;
   margin-top: 150px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 @media (max-width: 500px) {
   #container-wrapper {
@@ -16,38 +19,17 @@
   margin-right: auto;
 }
 #container #content {
-  min-height: 600px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  margin-top: 25px;
-}
-#container #content #form-container {
-  background-color: var(--color-background);
-  border-radius: 15px;
-  min-width: 500px;
-  min-height: 400px;
-}
-@media (max-width: 600px) {
-  #container #content #form-container {
-    min-width: unset;
-  }
-}
-#container #content #right-panel {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-#container #content #right-panel .text {
-  text-align: justify;
-}
-#container #content #right-panel .wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
   gap: 10px;
+  width: 50%;
+  margin-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
 }
-#container #content #right-panel .wrapper .item {
+#container #content .item {
   background-color: rgb(99, 151, 210);
   height: 150px;
   display: flex;
@@ -58,10 +40,10 @@
   position: relative;
   overflow: hidden;
 }
-#container #content #right-panel .wrapper .item .icon {
+#container #content .item .icon {
   transition: transform 0.3s ease;
 }
-#container #content #right-panel .wrapper .item .icon img {
+#container #content .item .icon img {
   max-width: 50px;
   max-height: 50px;
   width: auto;
@@ -69,17 +51,17 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
-#container #content #right-panel .wrapper .item#linkedin {
+#container #content .item#linkedin {
   background-color: #0e76a8;
 }
-#container #content #right-panel .wrapper .item#discord {
+#container #content .item#discord {
   background-color: #7289da;
 }
-#container #content #right-panel .wrapper .item#email {
+#container #content .item#email {
   background-color: #3d4b64;
   transition: all 0.5s ease;
 }
-#container #content #right-panel .wrapper .item::before {
+#container #content .item::before {
   content: "Kliknij, aby przejść";
   background-color: #f9ae6c;
   width: 100%;
@@ -92,29 +74,34 @@
   max-height: 0;
   transition: all 0.3s ease-in-out;
 }
-#container #content #right-panel .wrapper .item.copyable::before {
+#container #content .item.copyable::before {
   content: "Kliknij, aby skopiować";
 }
-#container #content #right-panel .wrapper .item:hover {
+#container #content .item:hover {
   cursor: pointer;
 }
-#container #content #right-panel .wrapper .item:hover .icon {
+#container #content .item:hover .icon {
   transform: scale(1.3);
 }
-#container #content #right-panel .wrapper .item:hover::before {
+#container #content .item:hover::before {
   max-height: 100px;
   padding: 10px 0;
 }
-#container #content #right-panel .wrapper .item:last-child {
+#container #content .item:last-child {
   grid-column: 1/-1;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
   #container #content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 70%;
   }
-  #container #content #form-container {
+}
+@media (max-width: 1000px) {
+  #container #content {
+    width: 80%;
+  }
+}
+@media (max-width: 800px) {
+  #container #content {
     width: 100%;
   }
 }

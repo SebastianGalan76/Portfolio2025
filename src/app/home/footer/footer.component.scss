@@ -1,0 +1,14 @@
+#container {
+    margin-top: 250px;
+
+    background-color: var(--color-background2);
+    text-align: center;
+
+    a {
+        color: var(--color-theme);
+
+        &:hover {
+            color: var(--color-theme-accent);
+        }
+    }
+}

@@ -1,19 +1,20 @@
 import { Injectable } from '@angular/core';
+import { NotificationService, NotificationType } from './notification.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ClipboardService {
 
-  constructor() { }
+  constructor(private notificationService: NotificationService) { }
 
   copyToClipboard(value: string): void {
     navigator.clipboard.writeText(value).then(
       () => {
-        //TODO Show toast
+        this.notificationService.showNotification("Skopiowano " + value + " do schowka.");
       },
       (err) => {
-        //TODO Show toast
+        this.notificationService.showNotification("Wystąpił nieoczekiwany błąd.", NotificationType.ERROR);
       }
     );
   }

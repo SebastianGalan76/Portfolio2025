@@ -4,39 +4,23 @@
             [description]="'Jeśli jesteś zainteresowany współpracą lub masz dodatkowe pytania, zapraszam do kontaktu. Odpowiem najszybciej, jak to możliwe!'" />
 
         <div id="content">
-            <div id="form-container">
-                <app-contact-form />
+            <a href="https://www.linkedin.com/in/galan-sebastian/" target="_blank" data-aos="fade-right">
+                <div class="item" id="linkedin">
+                    <div class="icon"><img src="/icon/icons8-linkedin.svg"></div>
+                    <div class="text">LinkedIn</div>
+                    <div class="value">Sebastian Gałan</div>
+                </div>
+            </a>
+            <div class="item copyable" id="discord" (click)="clipboard.copyToClipboard('DreaMPL')" data-aos="fade-left">
+                <div class="icon"><img src="/icon/discord-icon-svgrepo-com.svg"></div>
+                <div class="text">Discord</div>
+                <div class="value">DreaMPL</div>
             </div>
-
-            <div id="right-panel">
-                <div class="text">
-                    W swojej karierze programisty zdobyłem umiejętności w zakresie szerokiej gamy technologii i
-                    narzędzi,
-                    które pozwalają mi realizować wszelkiego rodzaju projekty. Poniżej znajdują się niektóre
-                    umiejętności,
-                    które rozwinąłem.
-                </div>
-
-                <div class="wrapper">
-                    <a href="https://www.linkedin.com/in/galan-sebastian/" target="_blank">
-                        <div class="item" id="linkedin">
-                            <div class="icon"><img src="/icon/icons8-linkedin.svg"></div>
-                            <div class="text">LinkedIn</div>
-                            <div class="value">Sebastian Gałan</div>
-                        </div>
-                    </a>
-                    <div class="item copyable" id="discord" (click)="clipboard.copyToClipboard('DreaMPL')">
-                        <div class="icon"><img src="/icon/discord-icon-svgrepo-com.svg"></div>
-                        <div class="text">Discord</div>
-                        <div class="value">DreaMPL</div>
-                    </div>
-                    <div class="item copyable" id="email"
-                        (click)="clipboard.copyToClipboard('sebastian.galan7625@gmail.com')">
-                        <div class="icon"><img src="/icon/email-mail-web-svgrepo-com.svg"></div>
-                        <div class="text">E-mail</div>
-                        <div class="value">sebastian.galan7625&#64;gmail.com</div>
-                    </div>
-                </div>
+            <div class="item copyable" id="email" (click)="clipboard.copyToClipboard('sebastian.galan7625@gmail.com')"
+                data-aos="fade-up">
+                <div class="icon"><img src="/icon/email-mail-web-svgrepo-com.svg"></div>
+                <div class="text">E-mail</div>
+                <div class="value">sebastian.galan7625&#64;gmail.com</div>
             </div>
         </div>
     </div>
