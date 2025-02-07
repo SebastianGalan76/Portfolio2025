@@ -1,5 +1,7 @@
 import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
+import { PopupService } from '../../service/popup.service';
+import { SelectCVPopupComponent } from '../../shared/popup-container/popup/select-cvpopup/select-cvpopup.component';
 
 @Component({
   selector: 'app-aside-menu',
@@ -9,6 +11,14 @@ import { Component } from '@angular/core';
 })
 export class AsideMenuComponent {
   isActive: boolean = false;
+
+  constructor(
+    private popupService: PopupService
+  ) { }
+
+  openSelectCVPopup() {
+    this.popupService.showPopup(SelectCVPopupComponent, [], []);
+  }
 
   scrollTo(elementId: string): void {
     const element = document.getElementById(elementId);

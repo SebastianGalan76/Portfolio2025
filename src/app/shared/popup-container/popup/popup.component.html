@@ -1,0 +1,7 @@
+<div id="container" [ngClass]="{'show': isActive}" (mousedown)="onMouseDown($event)" (mouseup)="onMouseUp($event)">
+    <div class="popup hidden">
+        <div class="popup-content">
+            <ng-container #popupContainer />
+        </div>
+    </div>
+</div>

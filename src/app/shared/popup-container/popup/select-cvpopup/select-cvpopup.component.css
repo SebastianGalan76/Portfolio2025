@@ -1,0 +1,70 @@
+#container {
+  background-color: #232c3d;
+  border-radius: 20px;
+  border: 2px solid #2f3849;
+  min-width: min(400px, 96vw);
+  overflow: hidden;
+}
+#container #header {
+  padding: 20px;
+  position: relative;
+  border-bottom: 2px solid #2f3849;
+}
+#container #header #title {
+  font-size: 1.1em;
+  font-weight: 800;
+}
+#container #header #close-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px 10px;
+  border-radius: 0 0 0 10px;
+  background-color: #2f3849;
+}
+#container #header #close-button:hover {
+  cursor: pointer;
+}
+#container #content {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+#container #content .option {
+  border: 2px solid #2f3849;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 10px;
+}
+#container #content .option .flag {
+  width: 200px;
+  aspect-ratio: 640/400;
+  overflow: hidden;
+  border-radius: 10px;
+}
+#container #content .option .flag img {
+  max-width: 200px;
+  width: auto;
+  height: auto;
+  display: block;
+}
+#container #content .option .name {
+  text-align: center;
+  font-size: 1.4em;
+  margin-top: 10px;
+}
+#container #content .option:hover {
+  cursor: pointer;
+  background-color: #2f3849;
+}
+@media (max-width: 550px) {
+  #container #content {
+    grid-template-columns: 1fr;
+  }
+  #container #content .option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}/*# sourceMappingURL=select-cvpopup.component.css.map */
